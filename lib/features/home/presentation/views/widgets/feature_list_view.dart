@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/widgets/image_list_Item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/image_list_item.dart';
 import 'package:flutter/material.dart';
 
 class FeatureListView extends StatelessWidget {
@@ -9,13 +9,14 @@ class FeatureListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .27,
       child: ListView.builder(
+      physics: BouncingScrollPhysics(),
+      
         scrollDirection: Axis.horizontal,
         itemCount: 10,
-        padding: const EdgeInsets.symmetric(horizontal: 8),
-        itemBuilder: (BuildContext context, int index) {
+         itemBuilder: (BuildContext context, int index) {
 
-          return Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 6),
+          return const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 6),
             child: ImageListItem(),
           );
         },
