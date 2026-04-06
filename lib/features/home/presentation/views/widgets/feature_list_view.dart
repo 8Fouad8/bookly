@@ -1,4 +1,4 @@
-import 'package:bookly/features/home/presentation/views/widgets/image_list_item.dart';
+import 'package:bookly/features/home/presentation/views/widgets/image_book_cover.dart';
 import 'package:flutter/material.dart';
 
 class FeatureListView extends StatelessWidget {
@@ -17,7 +17,7 @@ class FeatureListView extends StatelessWidget {
 
           return const Padding(
             padding: EdgeInsets.symmetric(horizontal: 6),
-            child: ImageListItem(),
+            child: ImageBookCover(circularRadius: 16,),
           );
         },
       ),

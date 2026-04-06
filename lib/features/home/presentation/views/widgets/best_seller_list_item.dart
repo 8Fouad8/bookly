@@ -70,19 +70,20 @@ class BestSellerListItem extends StatelessWidget {
 }
 
 class BookRating extends StatelessWidget {
-  const BookRating({super.key});
-
+  const BookRating({super.key,  this.mainAxisAlignment= MainAxisAlignment.start});
+final MainAxisAlignment mainAxisAlignment;
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: mainAxisAlignment,
       children: [
-        const FaIcon(FontAwesomeIcons.solidStar, color: Colors.amber, size: 16),
+        const FaIcon(size: 14,
+          FontAwesomeIcons.solidStar,color: Colors.amber),
         SizedBox(width: 5),
-        Text("4.8", style: Styles.textStyle16.copyWith()),
+        Text("4.8", style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600)),
         SizedBox(width: 5),
-
         Text("(2123)", style: Styles.textStyle16.copyWith(color: Colors.grey)),
       ],
-    );
+    );  
   }
 }
