@@ -13,7 +13,7 @@ class BookDetailsViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
     return CustomScrollView(
-      physics: NeverScrollableScrollPhysics(),
+      physics: AlwaysScrollableScrollPhysics(),
       slivers: [
         SliverFillRemaining(
           hasScrollBody: false,
@@ -45,7 +45,7 @@ class BookDetailsViewBody extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  'You can also like',
+                  '   You can also like',
                   style: Styles.textStyle16.copyWith(
                     fontWeight: FontWeight.w600,
                     color: Colors.white,
